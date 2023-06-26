@@ -9,8 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, count = 0;
-	char *str;
+	int count = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -26,24 +25,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			switch (*format)
-			{
-				case 'c':
-					_putchar(va_arg(args, int));
-					count++;
-					break;
-				case 's':
-					str = va_arg(args, char*);
-					for (i = 0; str[i] != '\0'; i++)
-					{
-						_putchar(str[i]);
-						count++;
-					}
-					break;
-				default:
-					_putchar(*format);
-					break;
-			}
+			count += _formatf(args, *format);
 		}
 		format++;
 	}

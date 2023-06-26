@@ -32,6 +32,11 @@ int _formatf(va_list args, char format)
 		case 'd':
 		case 'i':
 			num = va_arg(args, int);
+			if (!num)
+			{
+			_putchar('0');
+			count++;
+			}
 			count = _print_num(num, count);
 			break;
 		default:

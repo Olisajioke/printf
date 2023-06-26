@@ -17,6 +17,7 @@ int _print_num(int n, int count)
 		{
 			_putchar('-');
 			n = -n;
+			count++;
 		}
 		count++;
 		count = _print_num(n / 10, count);

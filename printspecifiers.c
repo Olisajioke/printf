@@ -39,6 +39,11 @@ int _formatf(va_list args, char format)
 			}
 			count = _print_num(num, count);
 			break;
+		case 'b':
+			unsigned int num = va_arg(args, unsigned int);
+
+			count = print_binary(num, count);
+			break;
 		default:
 			_putchar(format);
 			break;

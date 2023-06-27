@@ -42,7 +42,9 @@ int _formatf(va_list args, char format)
 			count += convuhex(va_arg(args, unsigned int));
 			break;
 		default:
+			_putchar('%');
 			_putchar(format);
+			count += 2;
 			break;
 	}
 	return (count);

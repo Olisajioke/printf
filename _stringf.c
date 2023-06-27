@@ -42,7 +42,8 @@ int convmod(int count)
 	count = 0;
 
 	_putchar('%');
-	return (count++);
+	count++;
+	return (count);
 }
 
 

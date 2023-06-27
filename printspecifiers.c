@@ -44,6 +44,30 @@ int _formatf(va_list args, char format)
 
 			count = print_binary(num, count);
 			break;
+		case 'u':
+			{
+			unsigned int num = va_arg(args, unsigned int);
+			count += _print_unsigned(num, 10, 0);
+			break;
+			}
+		case 'o':
+			{
+			unsigned int num = va_arg(args, unsigned int);
+			count += _print_unsigned(num, 8, 0);
+			break;
+			}
+		case 'x':
+			{
+			unsigned int num = va_arg(args, unsigned int);
+			count += _print_unsigned(num, 16, 0);
+			break;
+			}
+		case 'X':
+			{
+			unsigned int num = va_arg(args, unsigned int);
+			count += _print_unsigned(num, 16, 1);
+			break;
+			}
 		default:
 			_putchar(format);
 			break;

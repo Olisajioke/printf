@@ -9,5 +9,6 @@ int _printf(const char *format, ...);
 int _formatf(va_list args, char format);
 int _print_num(int n, int count);
 int print_binary(unsigned int num, int count);
+int _print_unsigned(unsigned int n, int base, int hex_case);
 
 #endif

@@ -1,12 +1,11 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
- * _printf - a function that produces output according to a format
- * @format: arguments
- * Return: number of characters printed
+ * _printf - a funct that produces output according to a format
+ * @format: list of types of arguments passed to the function
+ * Return: count of output characters.
  */
+
 int _printf(const char *format, ...)
 {
 	int count = 0;
